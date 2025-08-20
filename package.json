@@ -7,8 +7,10 @@
     "start": "node Asier.js"
   },
   "dependencies": {
+    "puppeteer": "^25.0.0"
   },
   "author": "SanKioto",
   "license": "MIT"
 }
+
 
