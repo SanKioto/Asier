@@ -540,11 +540,6 @@ if (activadoresSaludos.some(palabra => texto.includes(palabra))) {
     }
 }
 
-setTimeout(() => {
-    console.log("🔄 Reinicio programado");
-    process.exit(0);
-}, 6 * 60 * 60 * 1000);
-
 // --- Iniciar bot ---
 const IMVU_EMAIL = process.env.IMVU_EMAIL;
 const IMVU_PASSWORD = process.env.IMVU_PASSWORD;
