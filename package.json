@@ -2,9 +2,9 @@
   "name": "Bot Asier",
   "version": "1.0.0",
   "description": "Bot de Moebius",
-  "main": "Start.js",
+  "main": "start.js",
   "scripts": {
-    "start": "node Start.js"
+    "start": "node start.js"
   },
   "dependencies": {
     "puppeteer": "^24.6.0",
