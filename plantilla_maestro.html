@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Diario Maestro Asier Ciudadela de los Vampiros de Moebius</title>
+<style>
+body { font-family: sans-serif; margin: 20px; }
+.tabs { display: flex; flex-wrap: wrap; margin-bottom: 10px; }
+.tab { padding: 8px 12px; border: 1px solid #ccc; cursor: pointer; margin-right: 2px; }
+.tab-active { background-color: #eee; }
+.tab-content { border: 1px solid #ccc; padding: 10px; display: none; }
+.active { display: block; }
+</style>
+</head>
+<body>
+
+<h1>Diario Maestro Asier Ciudadela de los Vampiros de Moebius</h1>
+
+<div class="tabs" id="tabs"></div>
+<div id="contents"></div>
+
+<script>
+//__REGISTROS__//
+
+const tabsDiv = document.getElementById('tabs');
+const contentsDiv = document.getElementById('contents');
+
+for (const fecha in registros) {
+  const tab = document.createElement('div');
+  tab.className = 'tab';
+  tab.textContent = fecha;
+  tab.onclick = () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('tab-active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    tab.classList.add('tab-active');
+    document.getElementById('content-' + fecha).classList.add('active');
+  };
+  tabsDiv.appendChild(tab);
+
+  const content = document.createElement('div');
+  content.id = 'content-' + fecha;
+  content.className = 'tab-content';
+  content.innerHTML = registros[fecha];
+  contentsDiv.appendChild(content);
+}
+
+// Activar la primera pestaña por defecto
+if(tabsDiv.firstChild) tabsDiv.firstChild.click();
+</script>
+
+</body>
+</html>

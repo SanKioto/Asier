@@ -1,0 +1,14 @@
+{
+  "name": "Bot Asier",
+  "version": "1.0.0",
+  "description": "Bot de Moebius",
+  "main": "Asier.js",
+  "scripts": {
+    "start": "node Asier.js"
+  },
+  "dependencies": {
+  },
+  "author": "SanKioto",
+  "license": "MIT"
+}
+
