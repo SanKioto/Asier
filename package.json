@@ -6,9 +6,9 @@
   "scripts": {
     "start": "node Asier.js"
   },
-  "dependencies": {
-    "puppeteer": "^25.0.0"
-  },
+"dependencies": {
+  "puppeteer": "^24.6.0"
+}
   "author": "SanKioto",
   "license": "MIT"
 }
